@@ -5,7 +5,7 @@ export default function Home() {
 
 return(
     <BlogContainer>
-    Blog post nr 1
+        Blog post nr 1
     </BlogContainer>
 
 )

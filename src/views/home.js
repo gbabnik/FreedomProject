@@ -5,7 +5,9 @@ export default function Home() {
 
 return(
     <CardsContainer>
-    Kaj ti kej
+        <OneCardContainer>
+            Kaj ti kej
+        </OneCardContainer>
     </CardsContainer>
 
 )
@@ -38,30 +40,5 @@ const OneCardContainer = styled.div`
     color: red;
   }
 `
-const PhotoContainer = styled.img`
-          width: 100%;
-          border-radius: 10px;
-          @media (max-width: 600px) {
-            border-radius: 0px;
-          }
-`
-const TextContainer = styled.div`
-          z-index: 1;
-          font-size: 25px;
-          color: #fff;
-          position: absolute;
-          bottom: 15%;
-          left: 5%;
-`
-
-const TitleContainer = styled.div`
-          font-size: 25px;
-          padding: 5px;
-`
-const DescriptionContainer = styled.div`
-          font-size: 15px;
-          padding: 5px;
-`
-
 
 
