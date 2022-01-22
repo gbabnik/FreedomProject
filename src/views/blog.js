@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import ParsedMarkdown from '../components/markdown-parse.js'
 
 export default function Home() {
 
 return(
     <BlogContainer>
-        Blog post nr 1
+        <ParsedMarkdown></ParsedMarkdown>
     </BlogContainer>
 
 )
