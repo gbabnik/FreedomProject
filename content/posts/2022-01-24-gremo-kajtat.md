@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: "Gremo kajtat "
-date: 2022-01-24T19:42:13.568Z
+title: Gremo kajtat z novim datumom
+date: 2022-01-14T19:42:13.568Z
 thumbnail: /images/uploads/img_20211207_160805.jpg
 ---
 # Sex ratio
