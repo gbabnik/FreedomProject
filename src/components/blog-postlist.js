@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import React from 'react';
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
+import DayJS from 'react-dayjs';
 import { Link } from "react-router-dom"
 import {primaryColor} from '../globals.js'
 import {primaryFont} from '../globals.js'
@@ -10,16 +11,21 @@ import postlist from "../posts.json"
 export default function Postlist () {
         
 console.log(postlist)
+const excerptList = postlist.map(post => {
+    return post.content.split(" ").slice(0,15).join(" ")   //to display just the first 15 words of the content
+})
+console.log(excerptList)
   return (
       <Container>        
               {postlist.length && 
               postlist.map((post, i) => {
                   return (
-                    <PostContainer id = {post.id}> 
+                    <PostContainer id = {post.id} key = {post.id + "key"}> 
                         <PostTitle>{post.title}</PostTitle>
-                        <PostDate>{post.date}</PostDate>
+                        <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS></PostDate>
                         <PostImage>{post.thumbnail}</PostImage>
-                        <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown></PostContent>    
+                        {/* <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{excerptList[i]}</ReactMarkdown></PostContent>     */}
+                        <div>Read more...</div>
                     </PostContainer>
                   )
               })}          
@@ -41,7 +47,8 @@ const PostContainer = styled.div`
           flex-direction: column;
           width: 31.3%;
           border-radius: 10px;
-          height: 260px;
+          min-height: 260px;
+          max-height: 260px;
           max-width: 500px;
           min-width: 300px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
@@ -55,6 +62,8 @@ const PostContainer = styled.div`
             border-radius: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 10px;
+            min-height: 260px;
+            max-height: 1000px;
           }
           &::-webkit-input-placeholder {
     color: red;
