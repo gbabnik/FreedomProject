@@ -4,7 +4,9 @@ title: "Gremo kajtat "
 date: 2022-01-24T19:42:13.568Z
 thumbnail: /images/uploads/img_20211207_160805.jpg
 ---
-Most organisms which reproduce sexually have a 1:1 [sex ratio](https://en.wikipedia.org/wiki/Sex_ratio "Sex ratio") of male and female births. The English statistician and biologist [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher "Ronald Fisher") outlined why this is so in what has come to be known as [Fisher's principle](https://en.wikipedia.org/wiki/Fisher%27s_principle "Fisher's principle"). This essentially says the following:
+# Sex ratio
+
+Most organisms which reproduce sexually have a 1:1 sex ratio of male and female births. The English statistician and biologist Ronald Fisher outlined why this is so in what has come to be known as Fisher's principle. This essentially says the following:
 
 * 1. Suppose male births are less common than female.
   2. A newborn male then has better mating prospects than a newborn female, and therefore can expect to have more offspring.
