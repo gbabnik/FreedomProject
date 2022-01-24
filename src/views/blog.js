@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import ParsedMarkdown from '../components/markdown-parse.js'
+import Postlist from '../components/blog-postlist.js'
 
-export default function Home() {
+export default function Blog({children}) {
 
-return(
-    <BlogContainer>
-        <ParsedMarkdown></ParsedMarkdown>
-    </BlogContainer>
-
-)
-};
-
-const BlogContainer = styled.div`
-        
-          background-color: blue;
-`
+    return(
+        <Container>
+                <Postlist />
+                {children}
+        </Container>
+    
+        )
+    };
+    
+    const Container = styled.div`
+              background-color: transparent;
+              
+    `
+    
+    
+    

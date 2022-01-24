@@ -6,8 +6,8 @@ const dirPath = path.join(__dirname, "../content/posts") //tole spremenit
 
 let postlist = []
         // fs.readdir(path[, options], callback)  Reads the contents of a directory. The callback gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
-const getPosts = () => {
-     fs.readdir(dirPath, (err, files) => {
+const getPosts = async () => {
+     await fs.readdir(dirPath, (err, files) => {
         if (err) {
             return console.log("Failed to list contents of the directory:" + err)
         }
@@ -55,7 +55,7 @@ const getPosts = () => {
                 postlist.push(post) //We add the array thet we just made to an array               
                 if (i === files.length -1) {
                     //pogoj, da se funkcija izvede samo tokrat kot je md fajlov
-                    // console.log(postlist)
+                    console.log(postlist)
                     let data = JSON.stringify(postlist)
                     fs.writeFileSync("src/posts.json", data) //a JSON file name and location 
                 }
@@ -67,6 +67,5 @@ const getPosts = () => {
  
     return 
 }
-    setTimeout(() => {
+   
             getPosts()
-    }, 500)

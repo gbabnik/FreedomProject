@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import React from 'react';
 import { Link } from "react-router-dom";
 import {primaryColor} from '../globals.js'
+import {primaryFont} from '../globals.js'
 
 // const primaryColor = '#d1d1d1'
 
@@ -20,14 +21,14 @@ export default function Navbar () {
 )
 };
 
-const Nav = styled.div`
+const Nav = styled.header`
           overflow: hidden;
           margin: 0;
           /* padding: 20px 0px 0px 0px; */
           background-color: #111;
           text-align: center;
           font-size: 20px;
-          font-family: Georgia, sans-serif;
+          font-family: ${primaryFont};
           height: 70px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           z-index: -1;
