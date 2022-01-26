@@ -44,35 +44,41 @@ const getPosts = () => {
                 const metadataIndices = lines.reduce(getMetadataIndices, [])
                 const metadata = parseMetadata({lines, metadataIndices})
                 const content = parseContent({lines, metadataIndices})
+                // const testDate = metadata.date.replace("T", " ").slice(0, 19).concat(" -0100")
+                metadata.date = metadata.date.replace("T", " ").slice(0, 19).concat(" -0100") //to tranform a date-- because it was not able to read it before
                 const date = new Date(metadata.date)
-                const testDate = new Date("2022-01-24T23:14:28.145Z")
-                console.log(date)
-                console.log(metadata.date)
-                console.log(testDate)
-                console.log("____________________")
+                const timestamp = date.getTime() / 1000
+               console.log(date)
+                console.log(timestamp)
+                // console.log(testDate)
                 post = {
-                    id: i + 1, 
+                    id: timestamp, 
                     layout: metadata.layout ? metadata.layout : "No layout avaliable.",
                     title: metadata.title ? metadata.title : "No title avaliable.",
-                    date: metadata.date ? metadata.date: "No data avaliable.",
+                    date: metadata.date ? metadata.date: "No date avaliable.",
                     thumbnail: metadata.thumbnail ? metadata.thumbnail : "No tumbnail avaliable.",
                     content: content ? content : "No content."
                 }
                 postlist.push(post) //We add the array thet we just made to an array               
                 if (i === files.length -1) {
+                    const sortedList = postlist.sort((a,b) => {
+                        return a.id < b.id ? 1 : -1
+                    })
                     //pogoj, da se funkcija izvede samo tokrat kot je md fajlov
                     // console.log(postlist)
-                    let data = JSON.stringify(postlist)
+                    let data = JSON.stringify(sortedList)
                     fs.writeFileSync("src/posts.json", data) //a JSON file name and location 
+                    // console.log(sortedList)
+ 
                 }
             })
         })
     })
 
-    //     console.log(postlist)
+   
  
     return 
 }
-    setTimeout(() => {
+     setTimeout(() => {
             getPosts()
-    }, 500)
+     }, 6900)

@@ -20,13 +20,12 @@ console.log(excerptList)
               {postlist.length && 
               postlist.map((post, i) => {
                   return (
-                    <PostContainer id = {post.id} key = {post.id + "key"}> 
+                    <PostContainer id = {post.id} key = {post.id}> 
                         <PostTitle>{post.title}</PostTitle>
-                        <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS>{post.date}</PostDate>
+                        <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS></PostDate>
                         <PostImage src ={"public" + post.thumbnail} alt={"/public" + post.thumbnail} />
                         {/* <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{excerptList[i]}</ReactMarkdown></PostContent>     */}
                         <div>Read more...</div>
-                        <DayJS format="DD MMMM YYYY">2022-01-24T23:14:28.145Z</DayJS>{post.date}
                     </PostContainer>
                   )
               })}          
