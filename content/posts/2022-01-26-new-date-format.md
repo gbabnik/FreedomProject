@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: New date format
-date: 2022-01-26T11:02:00.000Z
+date: 2021-09-16T11:02:00.000Z
 thumbnail: /images/uploads/profile1.gif
 ---
 # Nature of work as developer
