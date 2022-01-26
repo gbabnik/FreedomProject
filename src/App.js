@@ -4,6 +4,7 @@ import "typeface-raleway";
 import styled from 'styled-components';
 import Blog from './views/blog.js';
 import Home from './views/home.js';
+import About from './views/about.js';
 import Navbar from './components/navbar.js'
 import Footer from './components/footer.js'
 import {primaryFont} from './globals.js'
@@ -22,6 +23,7 @@ export default function App() {
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/about" element={<About />} />
             </Routes>
         </Container>
         <Footer />     

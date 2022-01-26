@@ -15,6 +15,7 @@ export default function Navbar () {
          <NavbarUL>
             <NavbarLI> <MyLink to="/">Home</MyLink> </NavbarLI>
             <NavbarLI> <MyLink to="/blog">Blog</MyLink> </NavbarLI>
+            <NavbarLI> <MyLink to="/about">About</MyLink> </NavbarLI>
           </NavbarUL>
     </Nav>
 

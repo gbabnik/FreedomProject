@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node public/getPosts.js",
-    "try": "node public/testing.js"
+    "try": "node public/testing.js",
+    "pages": "node public/getPages.js"
   },
   "eslintConfig": {
     "extends": [

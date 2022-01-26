@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import ParsedMarkdown from '../components/markdown-parse.js'
 import Postlist from '../components/blog-postlist.js'
 
-export default function Blog({children}) {
+export default function Blog() {
 
     return(
         <Container>
                 <Postlist />
-                {children}
         </Container>
     
         )
@@ -16,6 +14,7 @@ export default function Blog({children}) {
     
     const Container = styled.div`
               background-color: transparent;
+              flex-shrink: 2;
               
     `
     
