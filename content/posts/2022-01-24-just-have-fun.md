@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Just have fun!
-date: 2022-01-23T19:47:16.731Z
+date: 2022-01-25T11:06:17.399Z
 thumbnail: /images/uploads/img_20211207_161450.jpg
 ---
 # Psychology of fun
