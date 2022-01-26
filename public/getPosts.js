@@ -44,6 +44,12 @@ const getPosts = () => {
                 const metadataIndices = lines.reduce(getMetadataIndices, [])
                 const metadata = parseMetadata({lines, metadataIndices})
                 const content = parseContent({lines, metadataIndices})
+                const date = new Date(metadata.date)
+                const testDate = new Date("2022-01-24T23:14:28.145Z")
+                console.log(date)
+                console.log(metadata.date)
+                console.log(testDate)
+                console.log("____________________")
                 post = {
                     id: i + 1, 
                     layout: metadata.layout ? metadata.layout : "No layout avaliable.",

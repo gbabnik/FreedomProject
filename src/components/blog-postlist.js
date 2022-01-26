@@ -22,10 +22,11 @@ console.log(excerptList)
                   return (
                     <PostContainer id = {post.id} key = {post.id + "key"}> 
                         <PostTitle>{post.title}</PostTitle>
-                        <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS></PostDate>
-                        <PostImage>{post.thumbnail}</PostImage>
+                        <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS>{post.date}</PostDate>
+                        <PostImage src ={"public" + post.thumbnail} alt={"/public" + post.thumbnail} />
                         {/* <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{excerptList[i]}</ReactMarkdown></PostContent>     */}
                         <div>Read more...</div>
+                        <DayJS format="DD MMMM YYYY">2022-01-24T23:14:28.145Z</DayJS>{post.date}
                     </PostContainer>
                   )
               })}          
@@ -82,8 +83,9 @@ const PostEl = styled.div`
                 font-style: italic;
 
         `
-        const PostImage = styled(PostEl)`
-                height: 150px;
+const PostImage = styled.img`
+        flex-direction: column;
+        height: 150px;
         `
         const PostContent = styled(PostEl)`
                 display: flex;
