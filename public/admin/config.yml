@@ -20,3 +20,16 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", picker_utc: true}  
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
+    files:
+      - file: "content/pages/about.md"
+        label: "About Page"
+        name: "about-page"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+
