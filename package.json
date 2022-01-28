@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "dayjs": "^1.10.7",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dayjs": "^0.3.2",
     "react-dom": "^17.0.2",
@@ -22,7 +23,7 @@
   "scripts": {
     "prestart": "npm-run-all -s server pages",
     "start": "react-scripts start",
-    "build": "npm-run-all -s prepare-content build:app",
+    "build": "npm-run-all -s prepare-content build:*",
     "build:app": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
