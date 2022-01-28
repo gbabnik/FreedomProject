@@ -3,4 +3,12 @@
 V slovenskih alpah se ponavadi znajdem 3krat na teden. Ukvarjam se z padalstvom, pogosto pa sedem tudi na kolo, pozimi pa stopim na smučke. 
 <br>
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/hLPwsIBQPv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1664" height="770" src="https://www.youtube.com/embed/hLPwsIBQPv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+Tole pa mal za sprostite:
+
+
+
+<iframe width="1664" height="770" src="https://www.youtube.com/embed/eTO80CK6bac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
