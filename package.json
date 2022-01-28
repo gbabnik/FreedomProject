@@ -22,7 +22,6 @@
   "scripts": {
     "prestart": "npm-run-all -s server pages",
     "start": "react-scripts start",
-    "prebuild": "npm-run-all -s server pages",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
