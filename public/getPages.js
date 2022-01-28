@@ -5,16 +5,16 @@ const dirPathPages = path.join(__dirname, "../content/pages") //tole spremenit
 
 let pageslist = []
 
-const getPages = () => {
-    fs.readdir(dirPathPages, (err, files) => {
+const getPages = async () => {
+    await fs.readdir(dirPathPages, (err, files) => {
        if (err) {
            return console.log("Failed to list contents of the directory:" + err)
        }
        // files je array vseh fajlov
        // za vsak fajn izpiše celotno vsebino 
-       files.forEach((file, i) => {
+        files.forEach((file, i) => {
            let pages 
-           fs.readFile(`${dirPathPages}/${file}`, "utf8", (err, contents) => {
+          await fs.readFile(`${dirPathPages}/${file}`, "utf8", (err, contents) => {
            
                //naredi array z dvema ciframa, torej kje so prve --- in druge ---, ki označujejo začetek in konec metadata v md fajlih
                pages = {
@@ -35,6 +35,5 @@ const getPages = () => {
 
    return 
 }
-setTimeout(() => {
-            getPages()
-}, 1000)
+
+    getPages()
