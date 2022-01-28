@@ -7,7 +7,7 @@ const dirPath = path.join(__dirname, "../content/posts") //tole spremenit
 let postlist = []
         // fs.readdir(path[, options], callback)  Reads the contents of a directory. The callback gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
 const getPosts = async () => {
-    await fs.readdir(dirPath, (err, files) => {
+     fs.readdir(dirPath, (err, files) => {
         if (err) {
             return console.log("Failed to list contents of the directory:" + err)
         }
