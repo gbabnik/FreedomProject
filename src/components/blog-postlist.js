@@ -4,8 +4,6 @@ import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import DayJS from 'react-dayjs';
 import { Link } from "react-router-dom"
-import {primaryColor} from '../globals.js'
-import {primaryFont} from '../globals.js'
 import postlist from "../posts.json"
 
 export default function Postlist () {
@@ -14,19 +12,28 @@ console.log(postlist)
 const excerptList = postlist.map(post => {
     return post.content.split(" ").slice(0,15).join(" ")   //to display just the first 15 words of the content
 })
-console.log(excerptList)
+
+const scrollToTop = () => {
+    window.scrollTo({
+      top: 100,
+      behavior: "smooth"
+    });
+  };
+
+// console.log(excerptList)
   return (
       <Container>        
               {postlist.length && 
               postlist.map((post, i) => {
                   return (
-                    <PostContainer id = {post.id} key = {post.id}> 
+                    <PostContainer id = {post.id} key = {post.id} onClick={scrollToTop}> 
+                        <MyLink to={"/blog/" + post.id}>
                         <PostTitle>{post.title}</PostTitle>
                         <PostDate>Posted on <DayJS format="DD MMMM YYYY">{post.date}</DayJS></PostDate>
-                        <PostImage src ={"public" + post.thumbnail} alt={"/public" + post.thumbnail} />
+                        <PostImage src ={post.thumbnail} alt={"/public" + post.thumbnail} />
                         {/* <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{excerptList[i]}</ReactMarkdown></PostContent>     */}
-                        <div>Read more...</div>
-                    </PostContainer>
+                        </MyLink>
+                    </PostContainer>   
                   )
               })}          
       </Container>
@@ -34,14 +41,32 @@ console.log(excerptList)
 };
 
 const Container = styled.div`
-          overflow: hidden;
+          // overflow: hidden;
           margin: 0px;
           padding: 10px;
           text-align: center;
+          // z-index: 1;
+
 `
+const linkAnimation = keyframes`
+{
+0%{
+  transform: scale(1)
+}
+50%{
+  transform: scale(1.03)
+  }
+100%{
+  transform: scale(1)
+  }
+}
+`
+
+
 const PostContainer = styled.div`
           overflow: hidden;
           position: relative;
+          // top: -100px;
           margin: 1%;
           display: inline-flex;
           flex-direction: column;
@@ -65,27 +90,45 @@ const PostContainer = styled.div`
             min-height: 260px;
             max-height: 1000px;
           }
+          &:hover {
+            animation: ${linkAnimation} 0.2s linear;
           &::-webkit-input-placeholder {
-    color: red;
+            color: red;
   }
 `
+
+
+const MyLink = styled(Link)`
+        color: black;
+        text-decoration: none;
+        display: block;
+`
+
 const PostEl = styled.div`  
         flex-direction: column;
 `
         const PostTitle = styled(PostEl)`
-                font-size: 20px;
+                font-size: 30px;
+                min-height: 40px;
                 text-transform: uppercase;
         `
         const PostDate = styled(PostEl)`
                 font-size: 12px;
+                min-height: 18px;
                 color: #555;
                 font-style: italic;
-
         `
+//         const PostLink = styled(PostEl)`
+//                 font-size: 20px;
+// `
+
 const PostImage = styled.img`
         flex-direction: column;
-        height: 150px;
+        display: block;
+        width: 100%;
+        height: auto;
         `
+
         const PostContent = styled(PostEl)`
                 display: flex;
                 font-size: 15px;

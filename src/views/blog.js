@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Postlist from '../components/blog-postlist.js'
+import { Outlet } from "react-router-dom";
+
 
 export default function Blog() {
 
+
+
     return(
         <Container>
+                <Outlet />
                 <Postlist />
         </Container>
     
@@ -13,9 +18,8 @@ export default function Blog() {
     };
     
     const Container = styled.div`
-              background-color: transparent;
-              flex-shrink: 2;
-              
+            // display: flex-block;
+            // width: 100vh;
     `
     
     

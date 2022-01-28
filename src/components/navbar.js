@@ -27,12 +27,14 @@ const Nav = styled.header`
           margin: 0;
           /* padding: 20px 0px 0px 0px; */
           background-color: #111;
+          position: sticky;
+          top: 0;
           text-align: center;
           font-size: 20px;
           font-family: ${primaryFont};
           height: 70px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          z-index: -1;
+          z-index: 1;
 
 `
 const linkAnimation = keyframes`

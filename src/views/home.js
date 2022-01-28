@@ -11,7 +11,7 @@ return(
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>{aboutText[1].contents}</ReactMarkdown>
     </Container>
 
-)
+  )
 };
 
 const Container = styled.div`

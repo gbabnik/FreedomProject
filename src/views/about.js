@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw'
 
 export default function About() {
 
-    console.log(aboutText[0].contents)
+    // console.log(aboutText[0].contents)
     return(
         <Container>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{aboutText[0].contents}</ReactMarkdown>

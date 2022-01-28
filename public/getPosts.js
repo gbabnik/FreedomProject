@@ -24,7 +24,7 @@ const getPosts = () => {
                     }
                     return accumulator
                 }
-                const parseMetadata = ({lines, metadataIndecis}) => {
+                const parseMetadata = ({lines, metadataIndices}) => {
                     if (metadataIndices.length > 0) {
                         let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1]) //naredi array samo iz metadata, torej od prvih --- do drugih ---
                         metadata.forEach(line => {
@@ -81,4 +81,4 @@ const getPosts = () => {
 }
      setTimeout(() => {
             getPosts()
-     }, 6900)
+     }, 1900)
