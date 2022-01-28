@@ -15,7 +15,11 @@ return(
 };
 
 const Container = styled.div`
-          background-color: transparent;
+        position: relative;
+        margin: 0 0 0 0;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
 `
 
 

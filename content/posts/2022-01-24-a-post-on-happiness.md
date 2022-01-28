@@ -6,13 +6,13 @@ thumbnail: /images/uploads/img_20220124_182725.jpg
 ---
 ## Biological role of seratonine
 
-Serotonin is involved in numerous physiological processes, including sleep, thermoregulation, learning and memory, pain, (social) behavior, sex, feeding, motor activity, biological rhythms and possibly others. In less complex animals, such as some invertebrates, serotonin regulates feeding and other processes. In plants serotonin synthesis seems to be associated with stress signals.
+Serotonin is involved in numerous physiological processes, including sleep, thermoregulation, learning and memory, pain, (social) behavior, sex, feeding, motor activity, biological rhythms and possibly others. In less complex animals, such as some invertebrates, serotonin regulates feeding and other processes. In plants serotonin synthesis seems to be associated with stress signals.
 
-### Cellular effects\[edit]
+### Cellular effects
 
 Serotonin primarily acts through its receptors and its effects depend on which cells and tissues express these receptors (see below).
 
-#### Receptors\[edit]
+#### Receptors\
 
 Main article: 5-HT receptor
 

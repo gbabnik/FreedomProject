@@ -15,7 +15,7 @@ const excerptList = postlist.map(post => {
 
 const scrollToTop = () => {
     window.scrollTo({
-      top: 100,
+      top: 0,
       behavior: "smooth"
     });
   };
@@ -72,8 +72,8 @@ const PostContainer = styled.div`
           flex-direction: column;
           width: 31.3%;
           border-radius: 10px;
-          min-height: 260px;
-          max-height: 260px;
+          min-height: 220px;
+          max-height: 220px;
           max-width: 500px;
           min-width: 300px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
@@ -87,8 +87,16 @@ const PostContainer = styled.div`
             border-radius: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin: 10px;
-            min-height: 260px;
-            max-height: 1000px;
+            min-height: 200px;
+            max-height: 240px;
+          }
+          @media (max-width: 350px) {
+            min-width: 97%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 10px;
+            min-height: 180px;
+            max-height: 200px;
           }
           &:hover {
             animation: ${linkAnimation} 0.2s linear;
@@ -111,6 +119,10 @@ const PostEl = styled.div`
                 font-size: 30px;
                 min-height: 40px;
                 text-transform: uppercase;
+                @media (max-width: 350px) {
+                  font-size: 25px;
+                  min-height: 35px;
+                }
         `
         const PostDate = styled(PostEl)`
                 font-size: 12px;

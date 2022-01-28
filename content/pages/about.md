@@ -1,4 +1,4 @@
-Živijo, sem Gašper in imam zelo rad gore. This is sth ABOUT, added by CMS me.
+Živijo, sem Gašper in imam zelo rad gore. This is sth ABOUT, added by CMS me. TRY TWO, changing JSON
 <br>
 V slovenskih alpah se ponavadi znajdem 3krat na teden. Ukvarjam se z padalstvom, pogosto pa sedem tudi na kolo, pozimi pa stopim na smučke. 
 <br>

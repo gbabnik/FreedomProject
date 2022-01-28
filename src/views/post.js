@@ -29,17 +29,17 @@ export default function Post () {
     // console.log(fetchedPost)
     return(
         <Container>               
-                    <PostContainer id = {postlist.id} key = {postlist.id}> 
+                <PostContainer id = {postlist.id} key = {postlist.id}> 
                        <PostImageContainer>
                            <PostImage src ={fetchedPost.thumbnail} alt={"/public" + fetchedPost.thumbnail} />
                         </PostImageContainer> 
-                            <ContentContainer>
+                        <ContentContainer>
                                 {/* <PostTitle>{fetchedPost.title}</PostTitle> */}
                                 <PostDate>Posted on <DayJS format="DD MMMM YYYY">{fetchedPost.date}</DayJS></PostDate> 
                                 <PostContent><ReactMarkdown rehypePlugins={[rehypeRaw]}>{fetchedPost.content}</ReactMarkdown></PostContent>    
                                 <div><Link to="..">Go back...</Link></div>
-                            </ContentContainer>   
-                     </PostContainer>          
+                        </ContentContainer>   
+                </PostContainer>          
         </Container>
         )
     };
@@ -59,8 +59,8 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
         position: relative;
-        top: -200px;
-        margin: 10px 0 -200px 0;       //tok kot je content za gor pomaknjen, tok margina mu odspodej dodam
+        top: -300px;
+        margin: 10px 0 -300px 0;       //tok kot je content za gor pomaknjen, tok margina mu odspodej dodam
         display: inline-flex;
         flex-direction: column;
         background: white;
@@ -68,6 +68,20 @@ const ContentContainer = styled.div`
         padding: 5rem 8% 0rem 8%;
         z-index: 0;
         width: 70%;
+        @media (min-width: 750px) and (max-width: 1000px) {
+            top: -200px;
+            margin: 10px 0 -200px 0;
+          }
+        @media (min-width: 500px) and (max-width: 750px) {
+            top: -100px;
+            margin: 10px 0 -100px 0;
+          }
+        @media (max-width: 500px) {
+            top: 0px;
+            margin: 10px 0 0px 0;
+            width: 90%;
+            padding: 1rem 1rem 1rem 1rem;
+          }
         
 `
 const PostEl = styled.div`  
@@ -92,10 +106,8 @@ const PostEl = styled.div`
         display: block;
         overflow: hidden;
         width: 100%;
-        height: 60vh;
-        z-index: -1;
-
-  
+        height: auto;
+        z-index: -1; 
 `
 const PostImage = styled.img`
     display: block;

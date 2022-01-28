@@ -18,6 +18,8 @@ const getPosts = () => {
             let post 
             fs.readFile(`${dirPath}/${file}`, "utf8", (err, contents) => {
                 //naredi array z dvema ciframa, torej kje so prve --- in druge ---, ki označujejo začetek in konec metadata v md fajlih
+                contents = contents.replace(/\u00A0/g, " ")   // replace all non breake elements with a whitespace
+                //console.log(contents)
                 const getMetadataIndices = (accumulator, element, i) => {
                     if (/^---/.test(element)) {
                         accumulator.push(i)
