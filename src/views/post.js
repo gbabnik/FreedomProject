@@ -59,8 +59,8 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
         position: relative;
-        top: -300px;
-        margin: 10px 0 -300px 0;       //tok kot je content za gor pomaknjen, tok margina mu odspodej dodam
+        top: calc(-150px - 10vw);
+        margin: 10px 0 calc(-150px - 10vw) 0;       //tok kot je content za gor pomaknjen, tok margina mu odspodej dodam
         display: inline-flex;
         flex-direction: column;
         background: white;
@@ -73,8 +73,8 @@ const ContentContainer = styled.div`
             margin: 10px 0 -200px 0;
           }
         @media (min-width: 500px) and (max-width: 750px) {
-            top: -100px;
-            margin: 10px 0 -100px 0;
+            top: -15vw;
+            margin: 10px 0 -15vw 0;
           }
         @media (max-width: 500px) {
             top: 0px;

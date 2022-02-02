@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import "typeface-raleway";
 import styled from 'styled-components';
@@ -22,7 +21,7 @@ export default function App() {
   return (
     <Router>          
         <Navbar />
-        <Container> 
+        <GlobalStyles> 
             <Routes>
               <Route path="" element={<Home />} />
               <Route path="blog" element={<Blog />}>
@@ -32,18 +31,22 @@ export default function App() {
               <Route path="about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-        </Container>
+        </GlobalStyles>
         <Footer />     
     </Router>
   );
 }
 
 
-
-const Container = styled.div`
+const GlobalStyles = styled.div`
   min-height: 100vh;
-  // display: flex;
   align-items: center;
   font-family: ${primaryFont};
-  // justify-content: center;
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
 `

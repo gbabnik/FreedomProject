@@ -1,2 +1,3 @@
-export const primaryColor = '#d8d1d1';
+export const primaryColor = '#111';
+export const primaryBGColor = '#ccc';
 export const primaryFont = 'Helvetica, sans-serif';
